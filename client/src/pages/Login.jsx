@@ -1,4 +1,3 @@
-import API_URL from "./api";
 import { useState } from "react";
 
 import axios from "axios";
@@ -23,7 +22,7 @@ function Login() {
     try {
 
       const res = await axios.post(
-  `${API_URL}/api/auth/login`,
+  "https://team-task-manager-production-6f19.up.railway.app/api/auth/login",
         {
           email,
           password,
