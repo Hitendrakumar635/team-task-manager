@@ -52,9 +52,9 @@ function Dashboard() {
 
   const openProfile = () => {
 
-  navigate("/profile");
+    navigate("/profile");
 
-};
+  };
 
   const logoutUser = () => {
 
@@ -69,7 +69,7 @@ function Dashboard() {
     try {
 
       await axios.post(
-        "team-task-manager-production-6f19.up.railway.app/api/projects",
+        "https://team-task-manager-production-6f19.up.railway.app/api/projects",
         {
           title: projectTitle,
           description: projectDescription,
@@ -93,7 +93,7 @@ function Dashboard() {
     try {
 
       await axios.post(
-        "team-task-manager-production-6f19.up.railway.app/api/tasks",
+        "https://team-task-manager-production-6f19.up.railway.app/api/tasks",
         {
           title: taskTitle,
           status: "Pending",
@@ -116,7 +116,7 @@ function Dashboard() {
   const getTasks = async () => {
 
     const res = await axios.get(
-      "team-task-manager-production-6f19.up.railway.app/api/tasks"
+      "https://team-task-manager-production-6f19.up.railway.app/api/tasks"
     );
 
     setTasks(res.data);
@@ -125,7 +125,7 @@ function Dashboard() {
   const updateStatus = async (id) => {
 
     await axios.put(
-      `team-task-manager-production-6f19.up.railway.app/api/tasks/${id}`,
+      `https://team-task-manager-production-6f19.up.railway.app/api/tasks/${id}`,
       {
         status: "Completed",
       }
@@ -137,7 +137,7 @@ function Dashboard() {
   const deleteTask = async (id) => {
 
     await axios.delete(
-      `team-task-manager-production-6f19.up.railway.app/api/tasks/${id}`
+      `https://team-task-manager-production-6f19.up.railway.app/api/tasks/${id}`
     );
 
     getTasks();
