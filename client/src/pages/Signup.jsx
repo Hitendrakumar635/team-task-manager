@@ -1,3 +1,4 @@
+import API_URL from "./api";
 import { useState } from "react";
 import axios from "axios";
 
@@ -9,7 +10,7 @@ function Signup() {
   const signupUser = async () => {
     try {
       await axios.post(
-        "https://team-task-manager-production-6f19.up.railway.app/api/auth/signup",
+  `${API_URL}/api/auth/signup`,
         {
           name,
           email,
