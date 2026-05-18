@@ -69,7 +69,7 @@ function Dashboard() {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/projects",
+        "team-task-manager-production-6f19.up.railway.app/api/projects",
         {
           title: projectTitle,
           description: projectDescription,
@@ -93,7 +93,7 @@ function Dashboard() {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/tasks",
+        "team-task-manager-production-6f19.up.railway.app/api/tasks",
         {
           title: taskTitle,
           status: "Pending",
@@ -116,7 +116,7 @@ function Dashboard() {
   const getTasks = async () => {
 
     const res = await axios.get(
-      "http://localhost:5000/api/tasks"
+      "team-task-manager-production-6f19.up.railway.app/api/tasks"
     );
 
     setTasks(res.data);
@@ -125,7 +125,7 @@ function Dashboard() {
   const updateStatus = async (id) => {
 
     await axios.put(
-      `http://localhost:5000/api/tasks/${id}`,
+      `team-task-manager-production-6f19.up.railway.app/api/tasks/${id}`,
       {
         status: "Completed",
       }
@@ -137,7 +137,7 @@ function Dashboard() {
   const deleteTask = async (id) => {
 
     await axios.delete(
-      `http://localhost:5000/api/tasks/${id}`
+      `team-task-manager-production-6f19.up.railway.app/api/tasks/${id}`
     );
 
     getTasks();

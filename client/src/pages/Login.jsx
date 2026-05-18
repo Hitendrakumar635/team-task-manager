@@ -22,7 +22,7 @@ function Login() {
     try {
 
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "team-task-manager-production-6f19.up.railway.app/api/auth/login",
         {
           email,
           password,
