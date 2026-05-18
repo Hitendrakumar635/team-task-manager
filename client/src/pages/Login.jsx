@@ -35,9 +35,7 @@ function Login() {
       );
 
       alert("Login Successful");
-
-      window.location.href =
-        "/dashboard";
+navigate("/dashboard");
 
     } catch (error) {
 
